@@ -1,0 +1,17 @@
+{
+  "name": "Open Tab",
+  "description": "Open tabs in current tab group",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Open a new tab in current tab group"
+    }
+  }
+}
