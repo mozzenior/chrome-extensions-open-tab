@@ -4,6 +4,7 @@ async function onCommand(command) {
   if (currentTab.groupId != -1) {
     await chrome.tabs.group({groupId: currentTab.groupId, tabIds: newTab.id});
   }
+  await chrome.tabs.move(newTab.id, {index: currentTab.index+1});
 }
 
 chrome.commands.onCommand.addListener(onCommand);
